@@ -1,0 +1,20 @@
+class Person :
+    def __init__(self,name , age):
+        self.name=name
+        self.age=age
+
+    def display(self):
+        return f"my name is {self.name } and my age is {self.age}"
+
+
+class Student(Person):
+    def __init__(self,name,age,grades):
+        super().__init__(name,age)
+        self.grades=grades
+
+person1=Person("Reem",20)
+student1=Student("rrrr",15,90)
+print(person1.name)
+print(student1.name)
+print(student1.age)
+print(student1.grades)

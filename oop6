@@ -1,0 +1,15 @@
+class Student :
+    study="Ai"     #class atribute
+    def __init__(self,name , age):
+        self.name=name      #inistance atribute
+        self.age=age        #inistance atribute
+
+    def display(self):
+        return f"my name is {self.name } and my age is {self.age}"
+s1=Student("RRR",22)
+print(s1.age)
+print(s1.name)
+print(s1.study)
+print(Student.study)
+Student.study="iot"
+print(Student.study)

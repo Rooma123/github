@@ -1,0 +1,89 @@
+#public
+class Person :
+    def __init__(self,name , age):
+        self.name=name
+        self.age=age
+
+    def display(self):
+        return f"my name is {self.name } and my age is {self.age}"
+person_1=Person("reem",20)
+print(person_1.name)
+
+
+
+#proticted
+class Customer :
+    def __init__(self,name,balance):
+        self._name=name
+        self._balance=balance
+    def _display(self):
+        return f"my name is {self._name } and my age is {self._balance}"
+    def get_name(self):
+        return {self._name}
+
+    def get_balance(self):
+        return {self._balance}
+
+
+class Manerer(Customer):
+    def __init__(self,name,balance,permisson):
+        super().__init__(name,balance)
+        self._permisson=permisson
+
+    def get_permisson(self):
+        return {self._permisson}
+
+
+cust_1=Customer("sss",20.000)
+print(cust_1.get_balance())
+print(cust_1.get_name())
+
+mang_1=Manerer("DDD",5000,"all_permission")
+print(mang_1.get_name())
+print(mang_1.get_balance())
+print(mang_1.get_permisson())
+
+#private
+class Student :
+    def __init__(self,name , age):
+        self.__name=name
+        self.__age=age
+
+    def display(self):
+        return f"my name is {self.__name } and my age is {self.__age}"
+
+
+    def get_name(self):
+        return {self.__name}
+
+    def get_age(self):
+        return {self.__age}
+
+    def set_name(self,new_name):
+         self.__name=new_name
+
+    def set_age(self,new_age):
+         self.__age=new_age
+
+
+class  Teacher(Student):
+    def __init__(self,name,age,salary):
+        super().__init__(name,age)
+        self.__salary=salary
+
+
+    def set_salary(self,new_salary):
+         self.__salary=new_salary
+
+
+    def get_salary(self):
+        return {self.__salary}
+
+
+student_1=Student("eee",22)
+print(student_1.get_name())
+
+teacher_1=Teacher("CCC",33,7000)
+print(teacher_1.get_name())
+print(teacher_1.get_age())
+print(teacher_1.get_salary())

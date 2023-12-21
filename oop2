@@ -1,0 +1,42 @@
+class Customer :
+    def __init__(self,name,balance):
+        self.name=name
+        self.balance=balance
+
+cust1=Customer("Reem",100.000)
+print(cust1.name)
+print(cust1.balance)
+
+
+class Customer :
+    def __init__(self,name,balance=0):
+        self.name=name
+        self.balance=balance
+
+cust1=Customer("Reem")
+print(cust1.name)
+print(cust1.balance)
+print(cust1)
+
+class Customer :
+    def __init__(self,name,balance=0):
+        self.name=name
+        self.balance=balance
+
+    def __str__(self):
+        return "customer :" +str(self.name )+" balance is "+ str(self.balance)
+
+    def __add__(self, other):
+        return Customer("The result" ,self.balance+other)
+
+
+
+cust1=Customer("Reem")
+print(cust1.name)
+print(cust1.balance)
+print(cust1)
+cust2=cust1+200
+print(cust2.balance)
+cust3=Customer("aaaa",1)
+del cust3
+print(cust3.name)

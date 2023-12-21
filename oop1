@@ -1,0 +1,16 @@
+class Person :
+    def __init__(self,name , age):
+        self.name=name
+        self.age=age
+
+    def display(self):
+        return f"my name is {self.name } and my age is {self.age}"
+
+person_1=Person("reem",20)
+print(person_1.name)
+person_1.name="aaaa"
+print(person_1.name)
+person_1.skills="python"
+print(person_1.name,person_1.skills)
+print(isinstance(person_1, Person))
+
